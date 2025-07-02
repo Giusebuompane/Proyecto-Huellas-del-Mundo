@@ -1,85 +1,76 @@
-# 🌍 Huellas del Mundo – Análisis del Turismo Extranjero en España (2014–2016)
+# 🌍 Huellas del Mundo – Análisis del Turismo Extranjero en España (2016–2024)
 
-Este proyecto explora el comportamiento y evolución del turismo internacional en España entre 2014 y 2016, con un enfoque analítico orientado a la obtención de insights accionables. Mediante técnicas estadísticas, visualización interactiva y análisis territorial, se identifican patrones de gasto, preferencias y evolución de los flujos turísticos.
-
----
-
-## 📌 Objetivo
-
-Analizar el turismo extranjero en España desde múltiples dimensiones (temporal, geográfica, conductual y económica) para detectar tendencias clave y relaciones significativas entre variables. El proyecto pone especial atención en:
-
-- El gasto turístico y su evolución
-- Las preferencias según comunidad autónoma y motivo de viaje
-- La duración de los viajes y su impacto en el gasto medio
-- Las diferencias entre países de origen, estacionalidad y tipos de alojamiento
+**Huellas del Mundo** es un proyecto de análisis de datos centrado en la evolución del turismo extranjero en España durante los años 2016 a 2024. A partir de fuentes oficiales del INE (Instituto Nacional de Estadística), este estudio profundiza en patrones de comportamiento, gasto y distribución geográfica de visitantes internacionales.
 
 ---
 
-## 📈 Principales análisis realizados
+## 🎯 Objetivo
 
-- **Evolución del volumen de turistas** según país de residencia y por meses del año
-- **Crecimiento anual (%) del turismo extranjero**
-- **Motivos del viaje** (ocio, negocios, visita a familiares/amigos, etc.) y su impacto en el comportamiento del visitante
-- Comparación entre **gasto medio total, gasto medio anual y gasto medio diario**
-- Evolución de la **duración media del viaje**
-- **Relación entre gasto medio y duración** según el motivo del viaje
-- Análisis de **preferencias de alojamiento** (el 73% elige hotel a nivel nacional)
-- **Análisis por Comunidad Autónoma (CCAA)**:
-  - Flujo turístico según destino principal
-  - Gasto medio vs gasto diario por CCAA
-  - Evolución anual del gasto por comunidad
-  - Duración media del viaje por comunidad
-  - **Correlación fuerte** entre gasto medio y duración media del viaje por comunidad (relación lineal clara)
-- **Visualización geoespacial** del comportamiento turístico en España mediante mapas interactivos
+Obtener insights accionables a partir de datos oficiales del INE sobre el turismo extranjero, aplicando técnicas de análisis exploratorio, validación estadística y visualización para detectar:
+
+- Tendencias temporales
+- Patrones por comunidad autónoma
+- Comportamientos diferenciados por nacionalidad y motivo del viaje
+- Relaciones entre duración del viaje y gasto
+- Oportunidades para la toma de decisiones basadas en datos
 
 ---
 
-## 🧪 Metodología y técnicas
+## 🧩 Datasets
 
-- **ETL**: Importación, transformación y limpieza de 9 datasets del INE (Instituto Nacional de Estadística)
-- **EDA**: Análisis exploratorio de datos con visualizaciones dinámicas
-- **Normalidad**: Prueba de Shapiro-Wilk para evaluar la distribución de variables clave
-- **Estadística inferencial**:
-  - ANOVA
-  - Kruskal-Wallis
-  - Pruebas post-hoc (Tukey HSD / Dunn)
-  - Correlaciones (Pearson, Spearman, Kendall)
-- **Visualización**:
-  - Dashboards e informes interactivos en Power BI
-  - Gráficos dinámicos y mapas con Python
+Se integraron 8 datasets oficiales del INE relacionados con el turismo extranjero, incluyendo información mensual por comunidad autónoma, país de residencia, tipo de alojamiento, motivo del viaje, gasto medio y duración.
 
 ---
 
-## 🧰 Herramientas utilizadas
+## 🔍 Análisis Realizado
 
-- **Python**:
-  - `Pandas`, `NumPy` – procesamiento y análisis de datos
-  - `Matplotlib`, `Seaborn`, `Plotly Express` – visualización estadística
-  - `GeoPandas` – visualización geográfica y mapas por Comunidad Autónoma
-  - `Scipy`, `Pingouin` – pruebas estadísticas
-- **Power BI**: Informe visual e interactivo para análisis detallado
-- **Jupyter Notebook**: Desarrollo técnico del análisis
-- **Datos**: fuentes oficiales del INE (2014–2016)
+✔️ **ETL (Extracción, Transformación y Carga)**  
+Importación, limpieza, normalización y unificación de los 8 datasets.
+
+✔️ **Análisis exploratorio de datos (EDA)**  
+Estudio de la evolución del volumen de turistas por país de origen, análisis de estacionalidad (Julio, Agosto y Septiembre son los meses con más afluencia, aunque los países nórdicos destacan en Octubre y Noviembre), destinos favoritos (Cataluña, Baleares y Canarias concentran el 52% del total) y duración media del viaje.
+
+✔️ **Gasto y duración**  
+- Evolución del gasto medio, gasto medio diario y duración media.
+- Comparativa por comunidad autónoma y por motivo del viaje.
+- Se observa una **relación lineal positiva entre duración y gasto medio**, especialmente por comunidad autónoma.
+
+✔️ **Motivo del viaje**  
+- Alta duración media y gasto total en viajes por estudios, trabajo estacional o motivos religiosos.
+- Mayor gasto medio diario en viajes por congresos y ferias.
+
+✔️ **Estudios estadísticos**  
+- Pruebas de normalidad (Shapiro-Wilk)
+- ANOVA, Kruskal-Wallis
+- Pruebas post-hoc (TukeyHSD, Dunn)
+- Correlaciones (Pearson, Spearman, Kendall)
+
+✔️ **Crecimiento del turismo extranjero**  
+📈 Entre 2016 y 2024, el número de turistas internacionales creció un **24,49%**.
 
 ---
 
-## 🗂️ Contenido del repositorio
+## 🧰 Herramientas y Librerías
 
-| Archivo                              | Descripción                                                                 |
-|-------------------------------------|-----------------------------------------------------------------------------|
-| `Datasets_Proyecto.ipynb`           | Notebook con ETL, EDA, visualización, mapas y pruebas estadísticas         |
-| `Visualización_BI_Proyecto.pbix`    | Informe en Power BI con visualizaciones y análisis por comunidad autónoma  |
-| `Presentación Huellas del mundo.pdf`| Documento resumen con introducción, gráficos clave y conclusiones          |
+- **Python**: `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly express`, `datetime`, `scipy`, `statsmodels`, `geopandas`
+- **Power BI**: Visualización interactiva y presentación del informe final
+- **Jupyter Notebook**: Desarrollo del análisis y visualizaciones
 
 ---
 
-## 💡 Conclusiones destacadas
+## 📊 Visualización
 
-- Las comunidades autónomas con mayor volumen turístico presentan también un gasto medio superior y estancias más largas.
-- El **motivo del viaje** influye fuertemente en el **gasto diario** y la **duración de la estancia**.
-- Se confirma una correlación positiva entre **duración media del viaje y gasto medio total**, especialmente a nivel regional.
-- A pesar de ligeras variaciones, **el hotel es la opción de alojamiento preferida** por el 73% de los visitantes internacionales.
-- Los **mapas geográficos** permiten detectar patrones regionales de preferencia turística y gasto de forma visual e inmediata.
+- Dashboards y gráficos interactivos desarrollados en Power BI (.pbix)
+- Gráficos de líneas, barras, mapas y dispersión con `matplotlib`, `seaborn`, `plotly`
+- Mapa geográfico de gasto y duración media por comunidad autónoma generado con `geopandas`
+
+---
+
+## 📁 Archivos del Repositorio
+
+- `Datasets_Proyecto.ipynb` → ETL, EDA, análisis y pruebas estadísticas
+- `Visualización_BI_Proyecto.pbix` → Informe interactivo con Power BI
+- `Presentación Huellas del Mundo.pdf` → Introducción y conclusiones clave
 
 ---
 
@@ -87,11 +78,10 @@ Analizar el turismo extranjero en España desde múltiples dimensiones (temporal
 
 👋 Soy **Giuseppe Buompane**, Analista de Datos con formación en Business Intelligence y análisis estadístico. Ayudo a equipos y empresas a transformar datos en decisiones informadas.
 
-🔗 [Conecta conmigo en LinkedIn](https://www.linkedin.com/in/giuseppebuompane)  
+¿Te interesa este enfoque de análisis aplicado?  
+¿Buscas talento junior con mirada analítica, rigor estadístico y mentalidad de mejora continua?
 
+🔗 Conecta conmigo en [LinkedIn](https://www.linkedin.com/in/giuseppebuompane)  
+📬 ¡Estoy abierto a nuevas oportunidades profesionales y colaboraciones!
 
----
-
-> ¿Te interesa este enfoque de análisis aplicado? ¿Buscas talento junior con mirada analítica, rigor estadístico y mentalidad de mejora continua?  
-> 📬 ¡Estoy abierto a nuevas oportunidades profesionales y colaboraciones!
 
